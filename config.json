@@ -17,7 +17,7 @@
     }
   ],
   "paths": {
-    "/experimentschedules": {
+    "/experiments/list": {
       "parameters": [],
       "get": {
         "summary": "ExperimentSchedule",
