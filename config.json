@@ -1,0 +1,391 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Mocks",
+    "version": "1.0",
+    "summary": "Mocks api",
+    "contact": {
+      "name": "Dmitry",
+      "email": "dmitry.pokhmelnov@gmail.com"
+    },
+    "description": "Mocked API for Experiments"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "clients"
+    }
+  ],
+  "paths": {
+    "/experimentschedules": {
+      "parameters": [],
+      "get": {
+        "summary": "ExperimentSchedule",
+        "operationId": "get-experimentschedules",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ExperimentSchedule"
+                  }
+                },
+                "examples": {
+                  "Data": {
+                    "value": [
+                      {
+                        "id": 1,
+                        "name": "Schedule A"
+                      },
+                      {
+                        "id": 2,
+                        "name": "Schedule B"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ExperimentSchedule"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Get list of ExperimentSchedule"
+      }
+    },
+    "/drugapplicationscheduls": {
+      "parameters": [],
+      "get": {
+        "summary": "DrugApplicationSchedul",
+        "operationId": "get-drugapplicationscheduls",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DrugApplicationSchedule"
+                  }
+                },
+                "examples": {
+                  "Data": {
+                    "value": [
+                      {
+                        "id": 1,
+                        "name": "10 µM, 5 levels, dilution factor of 2"
+                      },
+                      {
+                        "id": 2,
+                        "name": "10 µM, 3 levels, dilution factor of 4"
+                      },
+                      {
+                        "id": 3,
+                        "name": "200 µg/ml, 4 levels, dilution factor of 10"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DrugApplicationSchedule"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Get list of DrugApplicationSchedul"
+      }
+    },
+    "/clients": {
+      "parameters": [],
+      "get": {
+        "summary": "Clients",
+        "operationId": "get-clients",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Client"
+                  }
+                },
+                "examples": {
+                  "Data": {
+                    "value": [
+                      {
+                        "id": 1,
+                        "name": "Elephas"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Get list of Clients"
+      }
+    },
+    "/drugs": {
+      "parameters": [],
+      "get": {
+        "summary": "Drugs",
+        "operationId": "get-drugs",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Drug"
+                  }
+                },
+                "examples": {
+                  "Data": {
+                    "value": [
+                      {
+                        "id": 1,
+                        "name": "Doxorubicin"
+                      },
+                      {
+                        "id": 2,
+                        "name": "Cisplatin"
+                      },
+                      {
+                        "id": 3,
+                        "name": "Paclitaxel"
+                      },
+                      {
+                        "id": 4,
+                        "name": "Pembrolizumab + paclitaxel + carboplatin"
+                      },
+                      {
+                        "id": 5,
+                        "name": "Pembrolizumab + pemetrexed + platinum"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Drug"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Get list of Drugs"
+      }
+    },
+    "/tumors": {
+      "parameters": [],
+      "get": {
+        "summary": "Tumors",
+        "operationId": "get-tumors",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Tumor"
+                  }
+                },
+                "examples": {
+                  "Data": {
+                    "value": [
+                      {
+                        "id": 1,
+                        "name": "CT26.WT"
+                      },
+                      {
+                        "id": 2,
+                        "name": "EMT6"
+                      },
+                      {
+                        "id": 3,
+                        "name": "TM0006"
+                      },
+                      {
+                        "id": 4,
+                        "name": "J000103917"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Get list of Tumors"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Client": {
+        "title": "Client",
+        "type": "object",
+        "examples": [
+          {
+            "id": "string",
+            "name": "string"
+          }
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": ["string", "null"]
+          },
+          "blId": {
+            "type": ["string", "null"]
+          },
+          "changedBy": {
+            "type": ["string", "null"]
+          },
+          "changedOn": {
+            "type": "object"
+          }
+        }
+      },
+      "ExperimentSchedule": {
+        "title": "ExperimentSchedule",
+        "type": "object",
+        "examples": [
+          {
+            "id": "string",
+            "name": "string"
+          }
+        ],
+        "description": "",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": ["string", "null"]
+          }
+        }
+      },
+      "Drug": {
+        "title": "Drug",
+        "type": "object",
+        "examples": [
+          {
+            "id": "string",
+            "name": "string"
+          }
+        ],
+        "properties": {
+          "Id": {
+            "type": "integer"
+          },
+          "Name": {
+            "type": ["string", "null"]
+          },
+          "ChangedBy": {
+            "type": ["string", "null"]
+          },
+          "ChangedOn": {
+            "type": "object"
+          }
+        }
+      },
+      "DrugApplicationSchedule": {
+        "title": "DrugApplicationSchedul",
+        "type": "object",
+        "examples": [
+          {
+            "id": "string",
+            "name": "string"
+          }
+        ],
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          }
+        }
+      },
+      "Tumor": {
+        "title": "Tumor",
+        "type": "object",
+        "examples": [
+          {
+            "id": "string",
+            "name": "string"
+          }
+        ],
+        "properties": {
+          "Id": {
+            "type": "integer"
+          },
+          "TumorTypeId": {
+            "type": "integer"
+          },
+          "SourceId": {
+            "type": "integer"
+          },
+          "Details": {
+            "type": ["string", "null"]
+          },
+          "BlId": {
+            "type": ["string", "null"]
+          },
+          "ChangedBy": {
+            "type": ["string", "null"]
+          },
+          "ChangedOn": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "securitySchemes": {},
+    "requestBodies": {},
+    "responses": {},
+    "examples": {}
+  }
+}
