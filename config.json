@@ -257,6 +257,18 @@
         },
         "description": "Get list of Tumors"
       }
+    },
+    "/test": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "get-test"
+      }
     }
   },
   "components": {
@@ -275,13 +287,22 @@
             "type": "integer"
           },
           "name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "blId": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "changedBy": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "changedOn": {
             "type": "object"
@@ -303,7 +324,10 @@
             "type": "integer"
           },
           "name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           }
         }
       },
@@ -321,10 +345,16 @@
             "type": "integer"
           },
           "Name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "ChangedBy": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "ChangedOn": {
             "type": "object"
@@ -369,13 +399,22 @@
             "type": "integer"
           },
           "Details": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "BlId": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "ChangedBy": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "ChangedOn": {
             "type": "object"
