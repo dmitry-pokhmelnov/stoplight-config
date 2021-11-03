@@ -17,10 +17,10 @@
     }
   ],
   "paths": {
-    "/experiments/list": {
+    "/experimentsschedules": {
       "parameters": [],
       "get": {
-        "summary": "Experiments list",
+        "summary": "Experiments schedules",
         "operationId": "get-experimentslist",
         "responses": {
           "200": {
@@ -30,7 +30,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "type": "object"
+                    "$ref": "#/components/schemas/ExperimentSchedule"
                   }
                 },
                 "examples": {
@@ -260,7 +260,7 @@
     },
     "/experimentslist": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "Experiments list",
         "tags": [],
         "responses": {
           "200": {
