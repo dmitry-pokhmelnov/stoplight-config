@@ -532,13 +532,7 @@
         }
       }
     },
-    "securitySchemes": {
-      "API Key - 1": {
-        "name": "API Key",
-        "type": "apiKey",
-        "in": "query"
-      }
-    },
+    "securitySchemes": {},
     "requestBodies": {},
     "responses": {},
     "examples": {}
