@@ -20,8 +20,8 @@
     "/experiments/list": {
       "parameters": [],
       "get": {
-        "summary": "ExperimentSchedule",
-        "operationId": "get-experimentschedules",
+        "summary": "Experiments list",
+        "operationId": "get-experimentslist",
         "responses": {
           "200": {
             "description": "",
@@ -30,7 +30,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ExperimentSchedule"
+                    "type": "object"
                   }
                 },
                 "examples": {
@@ -63,7 +63,7 @@
             }
           }
         },
-        "description": "Get list of ExperimentSchedule"
+        "description": "Get list of Experiments"
       }
     },
     "/drugapplicationscheduls": {
