@@ -268,8 +268,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {}
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
                 },
                 "examples": {
                   "example": {
@@ -373,7 +375,8 @@
             }
           }
         },
-        "operationId": "get-experimentslist"
+        "operationId": "get-experimentslist",
+        "description": "Get list of experiments"
       }
     }
   },
