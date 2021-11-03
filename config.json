@@ -258,16 +258,122 @@
         "description": "Get list of Tumors"
       }
     },
-    "/test": {
+    "/experimentslist": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "1": {
+                        "details": {
+                          "id": 1,
+                          "barcode": "EXP10001",
+                          "client": "Elephas",
+                          "controlsNumber": 8,
+                          "description": "3 day study",
+                          "name": "Cryopreservation of cut vs uncut tumor",
+                          "sampleType": "SAMPLE_TYPE",
+                          "samplesCount": 5,
+                          "sourceType": "SOURCE_TYPE",
+                          "status": "ExperimentStatus.Draft",
+                          "tumorType": "EMT6",
+                          "drugApplicationSchedule": "Schedule A",
+                          "changedBy": "Laura Hrycyniak",
+                          "changedOn": "2021-10-12"
+                        },
+                        "samples": [
+                          {
+                            "id": "Sample 1",
+                            "tumorType": "TM0007",
+                            "step": "",
+                            "container": "CON27499",
+                            "location": "",
+                            "description": "SMP223105",
+                            "status": "Created",
+                            "type": "SAMPLE_TYPE",
+                            "isProcessed": false,
+                            "isAssigned": true,
+                            "createdAt": "new Date()"
+                          }
+                        ],
+                        "drugs": [
+                          {
+                            "name": "Doxorubicin",
+                            "application": "10 µM, 5 levels, dilution factor of 2",
+                            "priority": 1,
+                            "replicates": 2
+                          },
+                          {
+                            "name": "Doxorubicin",
+                            "application": "10 µM, 3 levels, dilution factor of 4",
+                            "priority": 2,
+                            "replicates": 3
+                          },
+                          {
+                            "name": "Paclitaxel",
+                            "application": "10 µM, 5 levels, dilution factor of 2",
+                            "priority": 3,
+                            "replicates": 2
+                          }
+                        ]
+                      },
+                      "2": {
+                        "details": {
+                          "id": 2,
+                          "barcode": "EXP10004",
+                          "client": "Elephas",
+                          "controlsNumber": 5,
+                          "description": "4 day study",
+                          "name": "Examining the effects of UV on fragment viability",
+                          "sampleType": "SAMPLE_TYPE",
+                          "samplesCount": 4,
+                          "sourceType": "SOURCE_TYPE",
+                          "status": "ExperimentStatus.InProgress",
+                          "tumorType": "CT26.WT",
+                          "drugApplicationSchedule": "Schedule B",
+                          "changedBy": "Laura Hrycyniak",
+                          "changedOn": "2021-10-13"
+                        },
+                        "samples": [],
+                        "drugs": [
+                          {
+                            "name": "Cisplatin",
+                            "application": "10 µM, 5 levels, dilution factor of 2",
+                            "priority": 1,
+                            "replicates": 2
+                          },
+                          {
+                            "name": "Paclitaxel",
+                            "application": "10 µM, 5 levels, dilution factor of 2",
+                            "priority": 2,
+                            "replicates": 2
+                          },
+                          {
+                            "name": "Nivolumab + Ipilimumab",
+                            "application": "200 µg/ml, 4 levels, dilution factor of 10",
+                            "priority": 3,
+                            "replicates": 3
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
-        "operationId": "get-test"
+        "operationId": "get-experimentslist"
       }
     }
   },
