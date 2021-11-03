@@ -21,7 +21,7 @@
       "parameters": [],
       "get": {
         "summary": "Experiments schedules",
-        "operationId": "get-experimentslist",
+        "operationId": "get-experimentsschedule",
         "responses": {
           "200": {
             "description": "",
